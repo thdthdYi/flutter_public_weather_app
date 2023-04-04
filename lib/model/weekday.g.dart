@@ -7,7 +7,7 @@ part of 'weekday.dart';
 // **************************************************************************
 
 _$_Weekdays _$$_WeekdaysFromJson(Map<String, dynamic> json) => _$_Weekdays(
-      time: json['time'] as int?,
+      time: json['time'] as int,
       val: json['val'] == null
           ? null
           : Val.fromJson(json['val'] as Map<String, dynamic>),

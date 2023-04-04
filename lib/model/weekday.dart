@@ -6,7 +6,7 @@ part 'weekday.freezed.dart';
 @freezed
 class Weekdays with _$Weekdays {
   factory Weekdays({
-    required int? time,
+    required int time,
     required Val? val,
   }) = _Weekdays;
 

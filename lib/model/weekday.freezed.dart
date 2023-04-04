@@ -20,7 +20,7 @@ Weekdays _$WeekdaysFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Weekdays {
-  int? get time => throw _privateConstructorUsedError;
+  int get time => throw _privateConstructorUsedError;
   Val? get val => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -34,7 +34,7 @@ abstract class $WeekdaysCopyWith<$Res> {
   factory $WeekdaysCopyWith(Weekdays value, $Res Function(Weekdays) then) =
       _$WeekdaysCopyWithImpl<$Res, Weekdays>;
   @useResult
-  $Res call({int? time, Val? val});
+  $Res call({int time, Val? val});
 
   $ValCopyWith<$Res>? get val;
 }
@@ -52,14 +52,14 @@ class _$WeekdaysCopyWithImpl<$Res, $Val extends Weekdays>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? time = freezed,
+    Object? time = null,
     Object? val = freezed,
   }) {
     return _then(_value.copyWith(
-      time: freezed == time
+      time: null == time
           ? _value.time
           : time // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as int,
       val: freezed == val
           ? _value.val
           : val // ignore: cast_nullable_to_non_nullable
@@ -87,7 +87,7 @@ abstract class _$$_WeekdaysCopyWith<$Res> implements $WeekdaysCopyWith<$Res> {
       __$$_WeekdaysCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({int? time, Val? val});
+  $Res call({int time, Val? val});
 
   @override
   $ValCopyWith<$Res>? get val;
@@ -104,14 +104,14 @@ class __$$_WeekdaysCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? time = freezed,
+    Object? time = null,
     Object? val = freezed,
   }) {
     return _then(_$_Weekdays(
-      time: freezed == time
+      time: null == time
           ? _value.time
           : time // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as int,
       val: freezed == val
           ? _value.val
           : val // ignore: cast_nullable_to_non_nullable
@@ -129,7 +129,7 @@ class _$_Weekdays implements _Weekdays {
       _$$_WeekdaysFromJson(json);
 
   @override
-  final int? time;
+  final int time;
   @override
   final Val? val;
 
@@ -166,13 +166,13 @@ class _$_Weekdays implements _Weekdays {
 }
 
 abstract class _Weekdays implements Weekdays {
-  factory _Weekdays({required final int? time, required final Val? val}) =
+  factory _Weekdays({required final int time, required final Val? val}) =
       _$_Weekdays;
 
   factory _Weekdays.fromJson(Map<String, dynamic> json) = _$_Weekdays.fromJson;
 
   @override
-  int? get time;
+  int get time;
   @override
   Val? get val;
   @override

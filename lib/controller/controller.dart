@@ -108,7 +108,7 @@ class Controller extends GetxController {
 
       await makeweeklist();
     }
-    print(weekdays[0].val!.wf);
+    print(weekdays[1].time);
     isLoading(true);
   }
 
@@ -203,29 +203,30 @@ class Controller extends GetxController {
       weekdays.add(Weekdays(
           time: 3, val: Val(rnst: weekItem.rnSt3Am, wf: weekItem.wf3Am)));
       weekdays.add(Weekdays(
+          time: 3, val: Val(rnst: weekItem.rnSt3Pm, wf: weekItem.wf3Pm)));
+      weekdays.add(Weekdays(
           time: 4, val: Val(rnst: weekItem.rnSt4Am, wf: weekItem.wf4Am)));
+      weekdays.add(Weekdays(
+          time: 4, val: Val(rnst: weekItem.rnSt4Pm, wf: weekItem.wf4Pm)));
       weekdays.add(Weekdays(
           time: 5, val: Val(rnst: weekItem.rnSt5Am, wf: weekItem.wf5Am)));
       weekdays.add(Weekdays(
+          time: 5, val: Val(rnst: weekItem.rnSt5Pm, wf: weekItem.wf5Pm)));
+      weekdays.add(Weekdays(
           time: 6, val: Val(rnst: weekItem.rnSt6Am, wf: weekItem.wf6Am)));
       weekdays.add(Weekdays(
+          time: 6, val: Val(rnst: weekItem.rnSt6Pm, wf: weekItem.wf6Pm)));
+      weekdays.add(Weekdays(
           time: 7, val: Val(rnst: weekItem.rnSt7Am, wf: weekItem.wf7Am)));
+      weekdays.add(Weekdays(
+          time: 7, val: Val(rnst: weekItem.rnSt7Pm, wf: weekItem.wf7Pm)));
+      /*
       weekdays.add(
           Weekdays(time: 8, val: Val(rnst: weekItem.rnSt8, wf: weekItem.wf8)));
       weekdays.add(
           Weekdays(time: 9, val: Val(rnst: weekItem.rnSt9, wf: weekItem.wf9)));
       weekdays.add(Weekdays(
-          time: 10, val: Val(rnst: weekItem.rnSt10, wf: weekItem.wf10)));
-      weekdays.add(Weekdays(
-          time: 15, val: Val(rnst: weekItem.rnSt3Pm, wf: weekItem.wf3Pm)));
-      weekdays.add(Weekdays(
-          time: 16, val: Val(rnst: weekItem.rnSt4Pm, wf: weekItem.wf4Pm)));
-      weekdays.add(Weekdays(
-          time: 17, val: Val(rnst: weekItem.rnSt5Pm, wf: weekItem.wf5Pm)));
-      weekdays.add(Weekdays(
-          time: 18, val: Val(rnst: weekItem.rnSt6Pm, wf: weekItem.wf6Pm)));
-      weekdays.add(Weekdays(
-          time: 19, val: Val(rnst: weekItem.rnSt7Pm, wf: weekItem.wf7Pm)));
+          time: 10, val: Val(rnst: weekItem.rnSt10, wf: weekItem.wf10)));*/
     }
   }
 }
