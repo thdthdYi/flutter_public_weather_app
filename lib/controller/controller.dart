@@ -108,7 +108,6 @@ class Controller extends GetxController {
 
       await makeweeklist();
     }
-    print(weekdays[1].time);
     isLoading(true);
   }
 

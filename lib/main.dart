@@ -1,6 +1,6 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_weather_2/screen/homescreen2.dart';
+
 import 'screen/homescreen.dart';
 import 'package:get/get.dart';
 import 'controller/controller.dart';

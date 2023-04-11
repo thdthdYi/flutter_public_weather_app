@@ -37,7 +37,8 @@ class WeekCard extends StatelessWidget {
                               Expanded(
                                   child: Weekstat(
                                       height: constraint.maxHeight / 5,
-                                      day: Controller.to.weekdays[idx].time,
+                                      day:
+                                          '${Controller.to.weekdays[idx].time.toString()}일 후',
                                       time: idx++ % 2 == 1 ? "오후" : "오전",
                                       staticon: e.weathericon,
                                       state: e.label)))

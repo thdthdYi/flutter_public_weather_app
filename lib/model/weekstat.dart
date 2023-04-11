@@ -5,7 +5,7 @@ final fontStyle = TextStyle(
     color: Colors.blueGrey, fontSize: 15.0, fontWeight: FontWeight.w700);
 
 class Weekstat extends StatelessWidget {
-  final int day;
+  final String day;
   final String time;
   final double height;
   final Icon staticon; //날씨 아이콘
