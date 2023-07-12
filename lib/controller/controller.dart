@@ -12,6 +12,8 @@ import '../model/todayweather.dart';
 import '../model/weekday.dart';
 import '../model/weekweather.dart';
 
+import 'package:permission_handler/permission_handler.dart';
+
 class Controller extends GetxController {
   static Controller get to => Get.find<Controller>();
 
@@ -37,6 +39,9 @@ class Controller extends GetxController {
   void onInit() async {
     //initState 함수에서 async await가 되지 않으므로 별도로 함수를 만듦.
 
+    await locationPermission();
+
+/*
     //권한 체크하는 요청
     LocationPermission permission;
     permission = await Geolocator.checkPermission();
@@ -61,7 +66,7 @@ class Controller extends GetxController {
       } else {
         print('failed');
       }
-    }
+    }*/
   }
 
   //to allow current location in first screen
@@ -183,15 +188,18 @@ class Controller extends GetxController {
     }
 
     for (int i = 0; i < timeStatList!.length; i++) {
-      if (timeStatList[i].fcstTime?.substring(0, 2) ==
-          DateFormat('hh').format(DateTime.now())) {
+      print(timeStatList.length);
+      print(timeStatList[i].fcstTime?.substring(0, 2));
+      if (int.parse(timeStatList[i].fcstTime!.substring(0, 2)) <=
+          int.parse(DateFormat('hh').format(DateTime.now()))) {
         todaysky.add(timeStatList[i].sky);
       }
     }
 
     for (int i = 0; i < timeStatList.length; i++) {
-      if (timeStatList[i].fcstTime?.substring(0, 2) ==
-          DateFormat('hh').format(DateTime.now())) {
+      if (timeStatList[i].fcstTime?.substring(0, 2) == "00"
+          //DateFormat('hh').format(DateTime.now())
+          ) {
         nowStatList.add(timeStatList[i]);
       }
     }
@@ -226,6 +234,27 @@ class Controller extends GetxController {
           Weekdays(time: 9, val: Val(rnst: weekItem.rnSt9, wf: weekItem.wf9)));
       weekdays.add(Weekdays(
           time: 10, val: Val(rnst: weekItem.rnSt10, wf: weekItem.wf10)));*/
+    }
+  }
+
+  Future<void> locationPermission() async {
+    Map<Permission, PermissionStatus> status =
+        await [Permission.location].request();
+
+    if (status[Permission.location] == PermissionStatus.granted) {
+      await getLocation();
+      await fetchTodayData();
+      await fetchWeekData();
+    } else if (status[Permission.location] == PermissionStatus.denied) {
+      await locationPermission();
+
+      if (status[Permission.location] == PermissionStatus.granted) {
+        await getLocation();
+        await fetchTodayData();
+        await fetchWeekData();
+      } else {
+        print('failed');
+      }
     }
   }
 }

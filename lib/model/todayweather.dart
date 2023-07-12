@@ -16,8 +16,8 @@ class Todayweather with _$Todayweather {
 @freezed
 class Response with _$Response {
   factory Response({
-    required Header? header,
-    required Body? body,
+    required Header header,
+    required Body body,
   }) = _Response;
 
   factory Response.fromJson(Map<String, dynamic> json) =>
