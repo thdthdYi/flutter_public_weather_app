@@ -61,21 +61,3 @@ class weatherAPI {
 }
 
 
-
-/*
-http://apis.data.go.kr/1360000/VilageFcstInfoService_2.0/getVilageFcst
-?serviceKey=7jA2K24VM4wbe1kvwq74KhnqW1zYuiMHuKQciA6pMDmRBUddYnMQjp1IeSWYOv6jydlg/ykaucEbPuGFAQcE0Q==
-&numOfRows=10&pageNo=1
-&base_date=20230324&base_time=0500&nx=38&ny=127&dataType=JSON
-
-http://apis.data.go.kr/1360000/MidFcstInfoService/getMidLandFcst
-?serviceKey=	
-7jA2K24VM4wbe1kvwq74KhnqW1zYuiMHuKQciA6pMDmRBUddYnMQjp1IeSWYOv6jydlg%2FykaucEbPuGFAQcE0Q%3D%3D&numOfRows=10&pageNo=1
-&regId=11B00000&tmFc=202303240600
-&dataType=JSON
-
-http://apis.data.go.kr/1360000/MidFcstInfoService/getMidTa
-?serviceKey=7jA2K24VM4wbe1kvwq74KhnqW1zYuiMHuKQciA6pMDmRBUddYnMQjp1IeSWYOv6jydlg%2FykaucEbPuGFAQcE0Q%3D%3D&&numOfRows=10&pageNo=1
-&regId=11B00000&tmFc=202303300600&dataType=JSON
-
- */
